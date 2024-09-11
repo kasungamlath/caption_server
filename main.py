@@ -39,7 +39,7 @@ def get_caption_from_openai(base64_image):
 
 
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 
 
 @app.route('/caption', methods=['POST'])
