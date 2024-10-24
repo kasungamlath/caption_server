@@ -5,8 +5,7 @@ from openai import OpenAI
 
 client = OpenAI()
 
-PROMPT = "Create a short, catchy, and engaging Instagram caption for this photo. The caption should reflect the mood of the photo and include an element of humor, inspiration, or a relatable statement. Incorporate relevant hashtags where necessary. don't enclose the caption in quotes."
-
+PROMPT = "Create a short Instagram caption for this photo. Caption should include a title and short paragraph. It should sound professional and reflect the mood of the photo. Describe the style of photography where appropriate. Incorporate relevant hashtags where necessary. don't enclose the caption in quotes."
 
 def get_caption_from_openai(base64_image):
     response = client.chat.completions.create(
