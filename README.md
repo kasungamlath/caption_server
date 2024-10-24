@@ -16,11 +16,7 @@ User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/caption_server
 Environment="PATH=/home/ubuntu/caption_server/venv/bin"
-<<<<<<< HEAD
-Environment="OPENAI_API_KEY=openai-key"
-=======
 Environment="OPENAI_API_KEY=openai_api_key"
->>>>>>> 0f4027e (removed openai key)
 ExecStart=/home/ubuntu/caption_server/venv/bin/gunicorn --bind 0.0.0.0:5000 --workers 3 --bind unix:caption.sock -m 777 wsgi:app
 
 [Install]
@@ -51,4 +47,11 @@ server {
     server_name 52.64.244.18 caption.kasungamlath.com;
     return 404; # managed by Certbot
 }
+```
+
+Prompts used (current at the top)
+```
+1. Create a short, catchy, and engaging Instagram caption for this photo. The caption should reflect the mood of the photo and include an element of humor, inspiration, or a relatable statement. Incorporate relevant hashtags where necessary. don't enclose the caption in quotes.
+1. Create a short Instagram caption for this photo. Caption should include a title and short paragraph. It should sound professional and reflect the mood of the photo. Describe the style of photography where appropriate. Incorporate relevant hashtags where necessary. don't enclose the caption in quotes.
+
 ```
